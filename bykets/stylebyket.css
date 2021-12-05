@@ -1,0 +1,241 @@
+*, *:after, *:before {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+}
+header:after, section:after, footer:after ,.container:after{
+	content: "";
+	display: table;
+	clear: both;
+	
+}
+
+header {
+	position: sticky;
+	background: #6E9381;
+	top:0;
+}
+body{
+	background: #6E9381;
+}
+/*==============================Общее=====================*/
+
+
+
+.container*{
+	margin: 0 ;
+	padding: 0 ;
+}
+
+.ava{
+	font-size: 3vw;
+	color: white;
+	display: flex;
+	justify-content:center;
+}
+#menu_all {
+	margin-top: 10px;
+	display: flex;
+	justify-content:center;
+	background: #6E9381;
+	max-width: 100%;
+}
+#menu_all >  li a {
+ display: flex;
+ justify-content:center;
+ background: #ececed;
+ padding: 15px 0% 15px 0%;
+ font-size: 1.1vw;
+ color: #454547;
+ text-decoration: none;
+ text-transform:uppercase;
+ white-space: pre;
+ border-left: 1px solid #b2b3b5;
+ box-shadow: 1px 5px 10px -5px black;
+ transition: all 0.2s ease;
+ text-align: center;
+}  
+#mark{
+	border-right:  1px solid #b2b3b5;
+}
+#menu_all >li  :hover{
+	background: #577C6A;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+#menu_all li:hover>ul{
+	display: flex;
+	flex-direction: column;
+}
+
+.podmenu  {
+	position: absolute;
+	display: none;
+}
+#menu_all >li>ul>li>a{
+	padding-left:12%;
+	padding-right:12%;
+}
+#mainbut{
+	background: #6E9381;
+}
+
+
+
+.againmenu {
+	display: none;
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	background: #30292A;
+	cursor: pointer;
+}
+.againmenu span {
+	display: block;
+	position: absolute;
+	top: 19px;
+	left: 8px;
+	right: 8px;
+	height: 2px;
+	background: white;
+}
+.againmenu span:before, .againmenu span:after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+}
+.againmenu span:before {
+	top: -10px;
+}
+.againmenu span:after {
+	bottom: -10px;
+}
+/* класс, который будет добавлен в верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+#menu_all.active {
+	max-height: 300px;
+}
+.container123{
+	display:block; 
+  	overflow: hidden;
+  	max-width: 100%;
+  	margin-left:5%;
+  	
+  }
+
+
+.flowers{
+	font-family: Snell Roundhand;
+	font-style:italic;
+	border-width:18px;
+	border-style:outset;
+	border-color:#E2A4BE;
+	margin: 1%;
+	background:#E2A4BE;
+	font-size: 1.2vw;
+	color:white;
+	text-align: center;
+	display: block;
+	float: left;
+	overflow: hidden;
+	box-shadow: inset 0 0 0 1px #8E6777;
+}
+.flowers:hover{
+	background:#C35B8C;
+	box-shadow: inset 0 0 0 1px #6D324E;
+	color: white;
+  border-top-color: #C35B8C;
+  border-right-color: #C35B8C;
+  border-bottom-color: #C35B8C;
+  border-left-color: #C35B8C;
+  -webkit-transition: border-top-color 0.3s, border-right-color 0.6s ,border-left-color 2s , border-bottom-color 2.5s ;
+  transition: border-top-color 0.2s linear 0.2s,border-right-color 0.4s linear 0.4s,  border-bottom-color 0.6s linear 0.6s, border-left-color 0.8s linear 0.8s;
+}
+
+.flowers img{
+	width:320px;
+	height: 400px;
+	background:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+	font-family: "Times New Roman";
+	color:white ;
+	background: #6E9381;
+	text-align: center;
+	font-size: 1vw;
+}
+footer a{
+	color:white ;
+}
+
+
+
+
+@media (max-width: 800px) {
+.againmenu {
+	display: block;
+}
+header {
+	padding: 12px 0;
+}
+#menu_all {
+	max-height: 0;
+	background: white;
+    position: absolute;
+	overflow: hidden;
+	top: 63px;
+    right: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	float: none;
+    z-index: 3;
+}
+#menu_all li {
+	display: block;
+    text-align: center;
+	border-bottom: 1px solid #EBEBE3;
+	margin-right: 0;
+}
+.line{
+	flex-direction: column;
+}
+.line1{
+	flex-direction: column;
+}
+.flowers{
+	font-size: 5vw;
+}

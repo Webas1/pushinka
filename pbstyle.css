@@ -1,0 +1,176 @@
+*, *:after, *:before {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+}
+header:after, section:after, footer:after ,.container:after{
+	content: "";
+	display: table;
+	clear: both;
+	
+}
+
+header {
+	position: sticky;
+	background: #6E9381;
+	top:0;
+}
+body{
+	background: #6E9381;
+}
+/*==============================Общее=====================*/
+
+.container*{
+	margin: 0 ;
+	padding: 0 ;
+}
+
+.ava{
+	font-size: 3vw;
+	color: white;
+	display: flex;
+	justify-content:center;
+}
+#menu_all {
+	margin-top: 10px;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	background: #6E9381;
+	max-width: 100%;
+}
+#menu_all >  li a {
+ display: flex;
+ justify-content:center;
+ background: #ececed;
+ padding: 15px 0% 15px 0%;
+ font-size: 1.1vw;
+ color: #454547;
+ text-decoration: none;
+ text-transform:uppercase;
+ white-space: pre;
+ border-left: 1px solid #b2b3b5;
+ box-shadow: 1px 5px 10px -5px black;
+ transition: all 0.2s ease;
+ text-align: center;
+}  
+#mark{
+	border-right:  1px solid #b2b3b5;
+}
+#menu_all >li  :hover{
+	background: #577C6A;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+#menu_all li:hover>ul{
+	display: flex;
+	flex-direction: column;
+}
+
+.podmenu  {
+	position: absolute;
+	display: none;
+}
+#menu_all >li>ul>li>a{
+	padding-left:12%;
+	padding-right:12%;
+}
+#mainbut{
+	background: #6E9381;
+}
+
+
+
+.againmenu {
+	display: none;
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	background: #30292A;
+	cursor: pointer;
+}
+.againmenu span {
+	display: block;
+	position: absolute;
+	top: 19px;
+	left: 8px;
+	right: 8px;
+	height: 2px;
+	background: white;
+}
+.againmenu span:before, .againmenu span:after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+}
+.againmenu span:before {
+	top: -10px;
+}
+.againmenu span:after {
+	bottom: -10px;
+}
+/* класс, который будет добавлен в верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+#menu_all.active {
+	max-height: 300px;
+}
+.main{
+	display:flex;
+	justify-content:center;
+	padding-top:3%;
+}
+.main img{
+	width: 37vw;
+	height: 37vh;
+	max-width: 100%;
+	padding: 1%;
+}
+.box{
+	text-align: center;
+	color: white;
+	font-size: 1vw;
+}
+#box1:hover{
+	border: 7px solid orange;
+}
+#box2:hover{
+	border: 7px solid orange;
+}
+.main div{
+	border: 7px dashed orange;
+	margin: 1%;
+}
+
+.but {
+	text-align: center;
+	background-color:black;
+	margin: 5% 10% 5% 10%;
+	border:3px solid black;
+	border-radius: 20px 20px 20px 20px;
+}
+.but1{
+	text-align: center;
+	color: white;
+	font-size: 1.8vw;	
+}
+.but:hover{
+	background-color:#6E9381;
+}
