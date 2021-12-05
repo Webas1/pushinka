@@ -1,0 +1,166 @@
+*, *:after, *:before {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+}
+header:after, section:after, footer:after ,.container:after{
+	content: "";
+	display: table;
+	clear: both;
+	
+}
+.container{
+	margin: 0 auto;
+	width: 100%;
+	max-width: auto;
+	padding: 0 15px;
+}
+header {
+	width: 100%;
+	background: white;
+	padding: 15px 0;
+	position: sticky;
+  	top: 0;
+}
+body{
+	background: #1EAB81;
+}
+.ava {
+	display: block; 
+	float: left;
+	padding: 1% 1% 1% 1%;
+}
+.ava span{
+	width: 40px;
+	display: inline-block;
+	text-align: center;
+	font-size: 2.5vw;
+	color: #1EAB81;
+	padding-left:  30%;
+	margin: 5px 0;
+}
+#menu_all{
+	float: right;
+	padding: 1.5% 1.5% 1.5% 1.5%;
+}
+#menu_all li {
+	display: inline-block;
+	margin-right: 20px;
+}
+#menu_all a {
+	text-transform: uppercase;
+	letter-spacing: 0.05vw;
+	font-size: 1.0vw;
+	font-weight: 600;
+	display: block;
+	line-height: 2.5vw;
+}
+.buttom{
+	color: #1EAB81;
+}
+#mainbut{
+	color:#DA5574;
+}
+#menu_all a:hover {
+	color: black;
+}
+#menu_all li:last-child  {
+	margin-right: 0;
+}
+
+.againmenu {
+	display: none;
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	background: #30292A;
+	cursor: pointer;
+}
+.againmenu span {
+	display: block;
+	position: absolute;
+	top: 19px;
+	left: 8px;
+	right: 8px;
+	height: 2px;
+	background: white;
+}
+.againmenu span:before, .againmenu span:after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+}
+.againmenu span:before {
+	top: -10px;
+}
+.againmenu span:after {
+	bottom: -10px;
+}
+/* класс, который будет добавлен в верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+#menu_all.active {
+	max-height: 300px;
+}
+.container1{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.line{
+
+}
+
+.flowers{
+	padding:4%;
+	text-align: center;
+	font-size: 1.5vw;
+	color:white;
+	display: none;
+	
+}
+.flowers:hover{
+	border:4px inset  ;
+	border-color: red red yellow yellow;
+}
+/*====================Кнопки фильтра================================*/
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.show{
+  		  	
+}
+.show.flowers{
+	display: grid;
+	grid-auto-flow: dense;
+}
